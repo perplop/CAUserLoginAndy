@@ -19,6 +19,7 @@ public class InMemoryUserDataAccessObject implements SignupUserDataAccessInterfa
     private final Map<String, User> users = new HashMap<>();
 
     private String currentUser;
+    // might need to change this to null in the constructor as noted in 2.1.3
 
     @Override
     public boolean existsByName(String identifier) {
@@ -33,6 +34,11 @@ public class InMemoryUserDataAccessObject implements SignupUserDataAccessInterfa
     @Override
     public User get(String username) {
         return users.get(username);
+    }
+
+    @Override
+    public void setCurrentUser(String name) {
+        this.currentUser = name;
     }
 
     @Override
