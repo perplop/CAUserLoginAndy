@@ -27,5 +27,15 @@ public interface LoginUserDataAccessInterface {
      */
     User get(String username);
 
+    /**
+     * A unimplemented method.
+     * @param name the name given to set current user to
+     */
     void setCurrentUser(String name);
+
+    /**
+     * A getter for the current user.
+     * @return current user
+     */
+    String getCurrentUser();
 }
